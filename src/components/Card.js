@@ -1,4 +1,5 @@
 import React, {useState,useEffect}from 'react'
+import '../styles/Card.css'
 
 const Card = (props) => {
     const [movie, setMovie ] = useState([])
@@ -11,14 +12,14 @@ const Card = (props) => {
             })
     },[])
     return (
-            <div className="card" style={{width: 250 }}>
-                <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} style={{height: 400 }} className="card-img-top" alt=""></img>
-                <div className="card-body">
-                    <h5 className="card-title">{movie.title}</h5>
-                    <p className="card-text">{movie.tagline}</p>
+            <div className="text-center card bg-dark">
+                <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} className="card-img-top"></img>
+                <div className="card-body text-light">
+                    <h6 className="card-title">{movie.title}</h6>
+                    <p className="card-text text-secondary h-7">{movie.tagline ? movie.tagline: movie.title}</p>
                 </div>
                 <div>
-                    <a href="/detalle" className="btn btn-primary">{props.title}</a>
+                    <a href="/detalle" className="btn btn-block btn-outline-info rounded-0">{props.title}</a>
                 </div>
             </div>)
 }
