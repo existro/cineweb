@@ -1,5 +1,6 @@
 import React, {useState,useEffect}from 'react'
 import '../styles/Card.css'
+import {Link} from 'react-router-dom'
 
 const Card = (props) => {
     const [movie, setMovie ] = useState([])
@@ -8,7 +9,6 @@ const Card = (props) => {
             .then((datamovie)=>datamovie.json())
             .then((datamovie)=>{
                 setMovie(datamovie);
-                console.log(datamovie);
             })
     },[])
     return (
@@ -19,7 +19,8 @@ const Card = (props) => {
                     <p className="card-text text-secondary h-7">{movie.tagline ? movie.tagline: movie.title}</p>
                 </div>
                 <div>
-                    <a href="/detalle" className="btn btn-block btn-outline-info rounded-0">{props.title}</a>
+                    
+                    <Link to={`/sala/${movie.id}`} className="btn btn-block btn-outline-info rounded-0" >{props.title}</Link>
                 </div>
             </div>)
 }

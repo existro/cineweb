@@ -3,7 +3,8 @@
     transition: all 0.3s linear!important;
 }
 .card{
-    height:530px !important;
+    min-height:530px !important;
+    min-width:250px !important;
 }
 
 .card img{

@@ -1,7 +1,7 @@
 .App {
 
   text-align: center;
-  height: 100vh;
+  height: 100vh!important;
   background: rgb(40,49,73);
 background: linear-gradient(124deg, rgba(40,49,73,1) 7%, rgba(64,75,105,1) 47%, rgba(0,129,138,1) 100%);
 }

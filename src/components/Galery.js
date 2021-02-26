@@ -13,13 +13,13 @@ const Galery = (props)=>{
         })
     },[])
   return (
-    <div className="container justify-content-center ">
+    <div className="container ">
       <div className="row">
       {
         sala.map((element)=>{
                 return(
                   <div className="col-md-3">
-                    <Card
+                    <Card key={element.idmovie}
                     title={element.nombre}
                     idmovie = {element.idmovie}
                     key={element.idmovie}
