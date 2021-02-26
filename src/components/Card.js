@@ -12,7 +12,7 @@ const Card = (props) => {
             })
     },[])
     return (
-            <div className="text-center card bg-dark">
+            <div className="text-center card bg-dark animate__animated animate__backInLeft">
                 <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} className="card-img-top"></img>
                 <div className="card-body text-light">
                     <h6 className="card-title">{movie.title}</h6>
