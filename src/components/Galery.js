@@ -19,10 +19,9 @@ const Galery = (props)=>{
         sala.map((element)=>{
                 return(
                   <div className="col-md-3">
-                    <Card key={element.idmovie}
+                    <Card key={element._id}
                     title={element.nombre}
                     idmovie = {element.idmovie}
-                    key={element.idmovie}
                     ></Card>
                     </div>
                 )

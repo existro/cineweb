@@ -1,5 +1,6 @@
 {
   "name": "cineweb",
+  "homepage": "http://existro.shekalug.org/cineilu/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

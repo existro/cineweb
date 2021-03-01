@@ -5,7 +5,7 @@ import App from './components/App'
 import 'animate.css/animate.min.css'
 
 ReactDOM.render(
-    <App></App>
+    <App className="App"></App>
   ,
   document.getElementById("root")
 );

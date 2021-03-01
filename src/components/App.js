@@ -8,7 +8,7 @@ import '../styles/App.css'
 
 const App = ()=>{
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/cineilu">
             <div className="App">
                 <Switch>
                     <Route path="/" exact component={Home}></Route>

@@ -14,7 +14,7 @@ const Movie = ({match})=>{
 
     return(
         <div className="container align-items-center d-md-flex justify-content-evently h-100">
-            <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} className="animate__animated animate__backInLeft" ></img>
+            <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} className="animate__animated animate__backInLeft img-fluid" alt="..."></img>
             <div className="text-light ">
                 <div className="display-3">{movie.title}</div>
                 <p>{movie.overview}</p>
