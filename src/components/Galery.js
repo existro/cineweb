@@ -6,7 +6,7 @@ const Galery = (props)=>{
 
   const [sala,setSala] = useState([])
     useEffect(() =>{
-        fetch('https://cineapi.vercel.app/sala')
+        fetch(`${process.env.REACT_APP_URL_API}sala`)
         .then((datasala)=>datasala.json())
         .then((datasala)=>{
             setSala(datasala);

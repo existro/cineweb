@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 const Card = (props) => {
     const [movie, setMovie ] = useState([])
     useEffect(() =>{
-            fetch(`https://api.themoviedb.org/3/movie/${props.idmovie}?api_key=d1a6b16ec2fb8265fede8d7bd34bbcb9&language=es`)
+            fetch(`${process.env.REACT_APP_TMDB}${props.idmovie}?api_key=${process.env.REACT_APP_API_KEY}&language=es`)
             .then((datamovie)=>datamovie.json())
             .then((datamovie)=>{
                 setMovie(datamovie);
@@ -13,7 +13,7 @@ const Card = (props) => {
     },[])
     return (
             <div className="text-center card bg-dark animate__animated animate__backInLeft">
-                <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} className="card-img-top img-fluid" alt="..."></img>
+                <img src={`${process.env.REACT_APP_IMG_TMDB}${movie.poster_path}`} className="card-img-top img-fluid" alt="..."></img>
                 <div className="card-body text-light">
                     <h6 className="card-title">{movie.title}</h6>
                     <p className="card-text text-secondary h-7">{movie.tagline ? movie.tagline: movie.title}</p>
