@@ -8,12 +8,11 @@ const Movie = ({match})=>{
             .then((datamovie)=>datamovie.json())
             .then((datamovie)=>{
                 setMovie(datamovie);
-                console.log(datamovie);
             })
     },[])
 
     return(
-        <div className="container align-items-center d-md-flex justify-content-evently h-100">
+        <div className="container align-items-center d-md-flex justify-content-evently h-100 titulo">
             <img src={`${process.env.REACT_APP_IMG_TMDB}${movie.backdrop_path}`} className="animate__animated animate__backInLeft img-fluid border" alt="..."></img>
             <div className="text-light ">
                 <div className="display-3">{movie.title}</div>

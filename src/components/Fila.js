@@ -8,7 +8,6 @@ const Fila = (props) => {
         .then((dataasie)=>dataasie.json())
         .then((dataasie) =>{
             setAsientos(dataasie)
-            console.log(dataasie)
         })
 
     },[])
