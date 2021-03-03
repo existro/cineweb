@@ -1,9 +1,9 @@
 
-
 const Asiento = (props) => {
     return (
-        <div>
-            {props.numero}{props.fila}
+        <div className="asiento">
+            <a>{props.fila},{props.numero}</a>
         </div>
     )
 }
+export default Asiento

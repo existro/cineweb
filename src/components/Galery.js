@@ -1,7 +1,6 @@
 import React, {useState,useEffect}from 'react'
 import Card from './Card'
 
-
 const Galery = (props)=>{
 
   const [sala,setSala] = useState([])
@@ -13,21 +12,18 @@ const Galery = (props)=>{
         })
     },[])
   return (
-    <div className="container ">
-      <div className="row">
+    <div className="d-flex flex-row flex-wrap justify-content-center">
       {
         sala.map((element)=>{
                 return(
-                  <div className="col-md-3">
                     <Card key={element._id}
                     title={element.nombre}
                     idmovie = {element.idmovie}
+                    idsala={element._id}
                     ></Card>
-                    </div>
                 )
             })
-      }
-      </div>
+          }
     </div>
   )
 }

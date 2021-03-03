@@ -1,5 +1,4 @@
 import React, {useState,useEffect}from 'react'
-import '../styles/Card.css'
 import {Link} from 'react-router-dom'
 
 const Card = (props) => {
@@ -13,14 +12,16 @@ const Card = (props) => {
     },[])
     return (
             <div className="text-center card bg-dark animate__animated animate__backInLeft">
-                <img src={`${process.env.REACT_APP_IMG_TMDB}${movie.poster_path}`} className="card-img-top img-fluid" alt="..."></img>
+                <a href={`/movie/${movie.id}`}>
+                <img src={`${process.env.REACT_APP_IMG_TMDB}${movie.poster_path}`} className="card-img-top img-fluid" alt="..." ></img>
+                </a>
                 <div className="card-body text-light">
                     <h6 className="card-title">{movie.title}</h6>
                     <p className="card-text text-secondary h-7">{movie.tagline ? movie.tagline: movie.title}</p>
                 </div>
                 <div>
                     
-                    <Link to={`/sala/${movie.id}`} className="btn btn-block btn-outline-info rounded-0" >{props.title}</Link>
+                    <Link to={`/sala/${props.idsala}`} className="btn btn-block btn-outline-info rounded-0" >{props.title}</Link>
                 </div>
             </div>)
 }

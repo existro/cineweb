@@ -5,7 +5,7 @@ import App from './components/App'
 import 'animate.css/animate.min.css'
 
 ReactDOM.render(
-    <App className="App"></App>
+    <App className="App container-fliud"></App>
   ,
   document.getElementById("root")
 );
