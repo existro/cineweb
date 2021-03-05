@@ -49,6 +49,19 @@ const Pedido = (props)=>{
 
     }
 
+    const handlenaChange = e =>{
+        e.preventDefault();
+        setnombre(e.target.value);
+    }
+    const handlenuChange = e =>{
+        e.preventDefault();
+        setnumero(e.target.value);
+    }
+    const handlefvChange = e =>{
+        e.preventDefault();
+        setfechav(e.target.value);
+    }
+
 return (
     <div className="container align-items-center d-flex justify-content-center">
             <div>
@@ -64,17 +77,18 @@ return (
   <div className="row g-0">
     <div className="col-md-4">
       <div className ="ccard">
-          <div className="numerot">{numero? numero : "0000000000000000"}</div>
-          <div className="nombret">{nombre? nombre : "nombre nombre apellido apellido"}</div>
-          <div className="fechavt">{fechav? fechav : "00/00"}</div>
+          <div className="numerot text-light ">{numero? numero : "0000000000000000"}</div>
+          <div className="nombret text-light ">{nombre? nombre : "nombre nombre apellido apellido"}</div>
+          <div className="fechavt text-light ">{fechav? fechav : "00/00"}</div>
+          <div className="cardt text-light ">Banco de películas</div>
       </div>
     </div>
-    <div className="col-md-8">
+    <div className="col-md-4">
       <div className="card-body">
-        <h5 className="card-title">Pago</h5>
-        <input className="form-control m-2"></input>
-        <input className="form-control m-2"></input>
-        <div className="text-light h3">Total: Q.{total}</div>
+        <input className="form-control fc-cc m-1" value={numero} onChange={handlenuChange} placeholder="Número de tarjeta"></input>
+        <input className="form-control fc-cc m-1" value={fechav} onChange={handlefvChange} placeholder="00/00"></input>
+        <input className="form-control fc-cc m-1" value={nombre} onChange={handlenaChange}placeholder="Nombre"></input>
+        <div className="text-light h3 fc-cc ">Total: Q.{total}</div>
       </div>
     </div>
   </div>
