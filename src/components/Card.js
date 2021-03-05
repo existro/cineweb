@@ -20,7 +20,7 @@ const Card = (props) => {
                     <p className="card-text text-secondary h-7">{movie.tagline ? movie.tagline: movie.title}</p>
                 </div>
                 <div>
-                    <Link to={`./sala/${props.idsala}`} className="btn btn-block btn-outline-info rounded-0" >{props.title}</Link>
+                    <Link to={{pathname:`./sala/${props.idsala}`,peli:movie}} className="btn btn-block btn-outline-info rounded-0" >{props.title}</Link>
                 </div>
             </div>)
 }

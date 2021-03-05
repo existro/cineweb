@@ -4,6 +4,7 @@ import Movies from './Movies'
 import Movie from './Movie'
 import Home from '../components/Home'
 import Sala from '../components/Sala'
+import Pedido from '../components/Pedido'
 
 
 const App = ()=>{
@@ -15,6 +16,7 @@ const App = ()=>{
                     <Route path="/movies" exact component={Movies}></Route>
                     <Route path="/movie/:id" component={Movie}></Route>
                     <Route path="/sala/:id" component={Sala}></Route>
+                    <Route path="/pedido" component={Pedido}></Route>
                 </Switch>
             </div>
         </BrowserRouter>
